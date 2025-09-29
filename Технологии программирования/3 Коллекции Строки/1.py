@@ -1,0 +1,7 @@
+name_team = input()
+print(f"{name_team} - чемпион!")
+print('-' * len(name_team))
+name_team = name_team.lower()
+print(f"длина наименования команды: {len(name_team)}")
+print(f"есть ли в наименовании команды буква «п»: {'п' in name_team}")
+print(f"сколько раз повторяется буква «а»: {name_team.count('а')}")
