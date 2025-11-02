@@ -1,0 +1,6 @@
+1) общая выручка: 286500
+2) самый дорогой товар по price: {'item': 'Ноутбук Z', 'price': 70000}
+3) товар с максимальной выручкой, по сумме всех его строк: {'item': 'Планшет M', 'revenue': 120000}
+4) товар с наибольшим суммарным quantity (с учётом дублей): {'item': 'Чехол T', 'quantity': 17}
+5) словарь: категория -> выручка, кол-во продаж: [{'category': 'Электроника', 'revenue': 240000, 'quantity': 6}, {'category': 'Электроника', 'revenue': 240000, 'quantity': 6}, {'category': 'Электроника', 'revenue': 240000, 'quantity': 6}, {'category': 'Аксессуары', 'revenue': 29500, 'quantity': 24}, {'category': 'Аксессуары', 'revenue': 29500, 'quantity': 24}, {'category': 'Периферия', 'revenue': 17000, 'quantity': 10}, {'category': 'Периферия', 'revenue': 17000, 'quantity': 10}, {'category': 'Аксессуары', 'revenue': 29500, 'quantity': 24}, {'category': 'Аксессуары', 'revenue': 29500, 'quantity': 24}]
+6) категория с максимальной выручкой: {'category': 'Электроника', 'revenue': 240000}
