@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form html</title>
+</head>
+<body>
+    <h2>Форма для ввода</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <p>Имя:<br><input name="firstname"></p>
+        <p>Фамилия:<br><input name="lastname"></p>
+        <p>Отчество:<br><input name="patronymic"></p>
+        <p>Возраст:<br><input name="age" type="number"></p>
+        <p>Адресс: <br><textarea name="adress"></textarea></p>
+        <p><select name="group">
+                <option>У-242</option>
+                <option>У-243</option>
+                <option>У-244</option>
+            </select>
+        </p>
+        <p>Экзамены:<br>
+            <input name="exams"><br>
+            <input name="exams"><br>
+            <input name="exams"><br>
+        </p>
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>

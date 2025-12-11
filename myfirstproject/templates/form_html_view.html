@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Получение данных</title>
+</head>
+<body>
+    <p>Фамилия: {{ lastname }}</p>
+    <p>Имя: {{ firstname }}</p>
+    <p>Отчество: {{ patronymic }}</p>
+    <p>Возраст: {{ age }}</p>
+    <p>Адрес: {{ adress }}</p>
+    <p>Группа: {{ group }}</p>
+    <p>Экзамены:
+        <ul>
+            {% for exam in exams %}
+            <li>{{ exam }}</li>
+            {% endfor %}
+        </ul>
+    </p>
+
+</body>
+</html>

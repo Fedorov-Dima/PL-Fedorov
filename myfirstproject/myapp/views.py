@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .forms import *
 
 # Create your views here.
 def index(request):
@@ -19,11 +20,25 @@ def contact(request):
 def statfiles(request):
     return render(request, "statfiles.html")
 
-def products(request, productid):
-    category = request.GET.get("cat", '')
-    output = "<h2>Product №{0} Category: {1}</h2>".format(productid, category)
-    return HttpResponse(output)
+def formhtml(request):
+    if request.method == "POST":
+        firstname = request.POST.get("firstname", "Undefined")
+        lastname = request.POST.get("lastname", "Undefined")
+        patronymic = request.POST.get("patronymic", "Undefined")
+        age = request.POST.get("age", 1)
+        adress = request.POST.get("adress", "Undefined")
+        group = request.POST.get("group", "У-242")
+        exams = request.POST.getlist("exams", ['Технологии программирования'])
+        data = {"firstname": firstname, "lastname": lastname, "patronymic": patronymic, "age": age, "adress": adress,
+                "group": group, "exams": exams}
+        return render(request, "form_html_view.html", context=data)
+    else:
+        return render(request, "form_html.html")
 
-def users(request, id, name):
-    output = f"<h2>Пользователь</h2><h3>id: {id} имя: {name}</h3>"
-    return HttpResponse(output)
+def fields(request):
+    userformfields = UserFormFields()
+    return render(request, "fields.html", {"formfields": userformfields})
+
+def userdata(request):
+    userformdata = UserFormData()
+    return render(request, "fields.html", {"formfields": userformdata})
