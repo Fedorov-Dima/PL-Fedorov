@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Default title{% endblock title %}</title>
+</head>
+<body>
+    <div><a href="/">Простые данные</a> | <a href="/contact">Сложные данные</a> | <a href="/statfiles">Картинки</a></div>
+    <h1>{% block header %}{% endblock header %}</h1>
+    <div>{% block content %}{% endblock content %}</div>
+    <div>{% include "banner.html" %}</div>
+    <div>На основе базового шаблона!</div>
+</body>
+</html>

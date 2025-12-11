@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}Сложные данные{% endblock title %}
+{% block header %}Сложные данные{% endblock header %}
+{% block content %}
+<p>Имя: {{ user.name }}, Возраст: {{ user.age }}</p>
+<p>Адресс: ул. {{ adress.0 }}, д. {{ adress.1 }}, кв. {{ adress.2 }}</p>
+<p>Языки: {{ langs.0 }}, {{ langs.1 }}, {{ langs.2 }}</p>
+{% endblock content %}

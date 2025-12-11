@@ -3,13 +3,21 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse("<h2>Главная</h2>")
+    data = {"message": "Пример простых данных"}
+    return render(request, "index.html", context=data)
 
 def about(request):
-    return HttpResponse("<h2>О сайте</h2>")
+    return render(request, "about.html")
 
 def contact(request):
-    return HttpResponse("<h2>Контакты</h2>")
+    langs = ["Python", "Java", "1С"]
+    user = {"name": "Tom", "age": 23}
+    adress = ("Абрикосовая", 23, 45)
+    data = {"langs": langs, "user": user, "adress": adress}
+    return render(request, "contact.html", context=data)
+
+def statfiles(request):
+    return render(request, "statfiles.html")
 
 def products(request, productid):
     category = request.GET.get("cat", '')
